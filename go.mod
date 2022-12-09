@@ -1,3 +1,3 @@
-module github.com/samuel-pratt/logsnag.go
+module github.com/samuel-pratt/logsnag-go
 
 go 1.18

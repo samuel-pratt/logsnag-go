@@ -71,9 +71,9 @@ func (logsnag *LogSnag) Insight(title string, value string, icon string) bool {
 
 	payload := strings.NewReader(`{
 		"project": "` + logsnag.GetProject() + `",
-		"title":` + title + `,
-		"value":` + value + `,
-		"icon":` + icon + `,
+		"title": "` + title + `",
+		"value": "` + value + `",
+		"icon": "` + icon + `"
 	}`)
 
 	client := &http.Client{}
@@ -107,4 +107,17 @@ func NewLogSnag(token string, project string) LogSnag {
 		Token:   token,
 		Project: project,
 	}
+}
+
+func main() {
+	logSnag := NewLogSnag(
+		"d67d3443e793dad29d9c94df76838367",
+		"ferry-times",
+	)
+
+	logSnag.Insight(
+		"waitlist",    // Channel
+		"User Joined", // Event
+		"🛥️",          // Icon
+	)
 }
