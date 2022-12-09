@@ -1,11 +1,11 @@
-# Logsnag.go
+# logsnag-go
 
 A go module for publishing events and insights to LogSnag.
 
 ## Installation
 
 ```sh
-go get github.com/samuel-pratt/logsnag.go
+go get github.com/samuel-pratt/logsnag-go
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ go get github.com/samuel-pratt/logsnag.go
 
 ```go
 import (
-	"github.com/samuel-pratt/logsnag.go"
+	"github.com/samuel-pratt/logsnag-go"
 )
 ```
 
