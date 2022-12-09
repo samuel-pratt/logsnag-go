@@ -21,13 +21,12 @@ func (logsnag *LogSnag) Publish(channel string, event string, icon string, tags 
 	url := "https://api.logsnag.com/v1/log"
 	method := "POST"
 
+	// Create the description string from map
 	var pairs []string
-
 	for key, value := range tags {
 		pairs = append(pairs, fmt.Sprintf(`%s: %v`, key, value))
 	}
 
-	// Join the slice with commas and enclose the whole thing in curly braces to create the JSON string
 	description := strings.Join(pairs, ", ")
 
 	payload := strings.NewReader(`{
