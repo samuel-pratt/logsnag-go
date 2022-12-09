@@ -71,6 +71,7 @@ func (logsnag *LogSnag) Insight(title string, value string, icon string) bool {
 	method := "POST"
 
 	payload := strings.NewReader(`{
+		"project": "` + logsnag.GetProject() + `",
 		"title":` + title + `,
 		"value":` + value + `,
 		"icon":` + icon + `,
