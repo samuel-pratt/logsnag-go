@@ -31,14 +31,14 @@ logSnag := logsnag.NewLogSnag(
 
 ```go
 logSnag.Publish(
-    "waitlist",                         // Channel
-    "User Joined",                      // Event
-    "🛥️",                               // Icon
-    map[string]string{                  // Tags
+    "waitlist",         // Channel
+    "User Joined",      // Event
+    "🛥️",               // Icon
+    map[string]any{     // Tags
         "name": "john doe",
         "email": "john@example.com",
     },
-    true                                // Notify
+    true,               // Notify
 )
 ```
 
